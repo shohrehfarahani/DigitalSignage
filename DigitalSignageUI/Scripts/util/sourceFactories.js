@@ -52,7 +52,6 @@ application.factory('httpRequest', ['$http', function ($http) {
 
     };
     service.post = function (url, data, success, error) {
-        alert('post');
         $http({
             url: url,
             method: "POST",
@@ -60,7 +59,7 @@ application.factory('httpRequest', ['$http', function ($http) {
             contentType: "application/json; charset=utf-8",
             dataType: "json"
         }).success(function (data, status, headers, config) {
-            debugger
+            
             if (status == 200) {
                 if (data.result)
                     if (data.result.state == "error") {
@@ -81,7 +80,7 @@ application.factory('httpRequest', ['$http', function ($http) {
                 }
             }
         }).error(function (err, status, headers, config) {
-            debugger
+            
             //Loader.setLoader(false);
             //FoundationApi.publish('main-notifications', { title: Error_Title, content: "Ø®Ø·Ø§ Ø¯Ø± Ø³Ù…Øª Ø³Ø±ÙˆØ±"+'  status: '+status ,autoclose:"3000", color:"warning"});
         });

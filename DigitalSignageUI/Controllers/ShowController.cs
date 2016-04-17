@@ -9,10 +9,10 @@ using System.Web.Mvc;
 
 namespace DigitalSignageUI.Controllers
 {
-    public class DefaultController : Controller
+    public class ShowController : Controller
     {
         // GET: Default
-        public ActionResult Index()
+        public ActionResult ShowContent()
         {
             return View();
         }
@@ -23,7 +23,7 @@ namespace DigitalSignageUI.Controllers
         public ActionResult loadContent(int position, long content_id)
         {
 
-
+            
             ContentProxy serviceProxy = new ContentProxy();
             ResultMessage<List<AdsInfo>> contentList = serviceProxy.loadContentsWithAdsItemDetail(position, content_id);
 

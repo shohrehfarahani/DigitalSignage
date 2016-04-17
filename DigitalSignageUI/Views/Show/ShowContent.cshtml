@@ -1,5 +1,6 @@
 ﻿<link href="~/Skins/Style/Content/block06.css" rel="stylesheet" />
 <script src="~/Scripts/FrontEndController/showContentCtrlr.js"></script>
+<script src="~/Scripts/flowPlayer/flowplayer-3.2.13.min.js"></script>
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,7 +8,6 @@
   
 <div class="wrapper" ng-controller="showContentCtrlr">
     <div class="blockRight">
-        haideh
         <div class="blockRightTxtPlace">
             <div class="edit-button" data-size="180" data-type="3" data-position="4" style="margin:20px;"><img src="/data/images/edit-icon.png"></div>
             <ul class="slider-text slider-animation">
@@ -33,21 +33,16 @@
             </ul>
         </div>
     </div>
-
+    <style>
+        .flowplayerVideo {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
     <div class="blockVideoPlace">
         <div class="blockVideo">
             <div class="blockVideoPlayback">
-                <div class="edit-button" data-size="180" data-type="2" data-position="6"><img src="/data/images/edit-icon.png"></div>
-                @*[VIEW table="DS_ContentAds,DS_Ads(DS_Ads.id=DS_ContentAds.ad_id)" select_fields="DS_Ads.*,DS_ContentAds.interval,DS_ContentAds.id content_ad_id" id="ad" where="DS_Ads.passed_minutes < DS_Ads.max_minutes  AND  DS_ContentAds.position=6  AND  DS_ContentAds.content_id=[@NURL.content_id]"]
-                [VIEW table="DS_AdItems" id="item" where="ad_id=[ad.id]"]*@
-                <video width="100%" height="100%" class="video" id="video" preload="metadata" data-content_ad_id="[ad.content_ad_id]" data-ad_title="[ad.title]">
-                    <source src="/modules/DigitalSignage/data/ads/movies/[item.file_name]" type='video/mp4'>
-                </video>
-                @*[/VIEW]
-                [/VIEW]
-                [VIEW table="DS_ContentAds,DS_Lives(DS_Lives.id=DS_ContentAds.live_id)" select_fields="DS_Lives.*,DS_ContentAds.interval,DS_ContentAds.id content_ad_id" id="ad" where="DS_ContentAds.position=6  AND  DS_ContentAds.content_id=[@NURL.content_id]"]
-                [@MODULE.DigitalSignage.live_tv_player]
-                [/VIEW]*@
+                <div id="player" class="flowplayerVideo"  data-content_ad_id="{{scopeContent_ad_id}}" data-ad_title="{{scopeTitle}}"></div>
             </div>
 
 

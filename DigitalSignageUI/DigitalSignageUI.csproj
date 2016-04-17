@@ -144,7 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\ShowController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -219,6 +219,10 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\flowPlayer\flowplayer-3.2.13.min.js" />
+    <Content Include="Scripts\flowPlayer\flowplayer-3.2.16.swf" />
+    <Content Include="Scripts\flowPlayer\flowplayer.min.js" />
+    <Content Include="Scripts\flowPlayer\flowplayer.rtmp-3.2.12.swf" />
     <Content Include="Scripts\forms.js" />
     <Content Include="Scripts\FrontEndController\mainCtrlr.js" />
     <Content Include="Scripts\FrontEndController\showContentCtrlr.js" />
@@ -233,8 +237,6 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\util\uiUtil\util.js.svntmp" />
-    <None Include="Service References\AdsServices\configuration91.svcinfo" />
-    <None Include="Service References\AdsServices\configuration.svcinfo" />
     <Content Include="Scripts\util\factories.js" />
     <Content Include="Scripts\util\forms.js" />
     <Content Include="Scripts\util\serviceNames.js" />
@@ -243,21 +245,18 @@
     <Content Include="Scripts\util\uiUtil\gridTemplate.js" />
     <Content Include="Scripts\util\uiUtil\objectNames.js" />
     <Content Include="Scripts\util\utils.js" />
-    <Content Include="Service References\AdsServices\DigitalSignageUI.AdsServices.ResultMessageOfArrayOfAdsIemInfoWTONurSmnnE.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\AdsServices\DigitalSignageUI.AdsServices.ResultMessageOfArrayOfAdsInfoWTONurSmnnE.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\AdsServices\DigitalSignageUI.AdsServices.ResultMessageOfArrayOfLiveTVInfoWTONurSmnnE.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\AdsServices\DigitalSignageUI.AdsServices.ResultMessageOfstring.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\AdsServices\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
+    <None Include="Service References\AdsServices\ads.wsdl" />
+    <None Include="Service References\AdsServices\ads.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdsServices\ads1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdsServices\ads2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdsServices\ads3.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Service References\AlarmsServices\alarms.wsdl" />
     <None Include="Service References\AlarmsServices\alarms.xsd">
@@ -271,6 +270,12 @@
     </None>
     <None Include="Service References\AlarmsServices\alarms3.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdsServices\configuration91.svcinfo" />
+    <None Include="Service References\AdsServices\configuration.svcinfo" />
+    <None Include="Service References\AdsServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Service References\AlarmsServices\DigitalSignageUI.AlarmsServices.ResultMessageOfArrayOfAlarmsInfoWTONurSmnnE.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -422,20 +427,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Default\Index.cshtml" />
-    <None Include="Service References\AdsServices\ads.wsdl" />
-    <None Include="Service References\AdsServices\ads.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\AdsServices\ads1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\AdsServices\ads2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\AdsServices\ads3.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <Content Include="Views\Show\ShowContent.cshtml" />
     <None Include="Service References\TvsServices\tvs.wsdl" />
     <None Include="Service References\TvsServices\tvs.xsd">
       <SubType>Designer</SubType>
