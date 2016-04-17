@@ -1,0 +1,108 @@
+﻿<link href="~/Skins/Style/Content/block06.css" rel="stylesheet" />
+<script src="~/Scripts/FrontEndController/showContentCtrlr.js"></script>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+  
+<div class="wrapper" ng-controller="showContentCtrlr">
+    <div class="blockRight">
+
+        <div class="blockRightTxtPlace">
+            <div class="edit-button" data-size="180" data-type="3" data-position="4" style="margin:20px;"><img src="/data/images/edit-icon.png"></div>
+            <ul class="slider-text slider-animation">
+                @*[VIEW table="DS_ContentAds,DS_Ads(DS_Ads.id=DS_ContentAds.ad_id)" select_fields="DS_Ads.*,DS_ContentAds.interval,DS_ContentAds.id content_ad_id" id="ad" where="DS_Ads.passed_minutes < DS_Ads.max_minutes  AND  DS_ContentAds.position=4  AND  DS_ContentAds.content_id=[@NURL.content_id]"]
+                [VIEW table="DS_AdItems" id="item" where="ad_id=[ad.id]"]*@
+                <li data-interval="[ad.interval]" data-content_ad_id="[ad.content_ad_id]" data-ad_title="[ad.title]">
+                    <div class="blockRightTitle02">[item.title]</div>
+                    <div class="blockRightTxt02">[item.description]</div>
+                </li>
+                @*[/VIEW]
+                [/VIEW]*@
+            </ul>
+            <div class="edit-button" data-size="180" data-type="3" data-position="5" style="margin:20px;"><img src="/data/images/edit-icon.png"></div>
+            <ul class="slider-text slider-animation">
+                @*[VIEW table="DS_ContentAds,DS_Ads(DS_Ads.id=DS_ContentAds.ad_id)" select_fields="DS_Ads.*,DS_ContentAds.interval,DS_ContentAds.id content_ad_id" id="ad" where="DS_Ads.passed_minutes < DS_Ads.max_minutes  AND  DS_ContentAds.position=5  AND  DS_ContentAds.content_id=[@NURL.content_id]"]
+                [VIEW table="DS_AdItems" id="item" where="ad_id=[ad.id]"]*@
+                <li data-interval="[ad.interval]" data-content_ad_id="[ad.content_ad_id]" data-ad_title="[ad.title]">
+                    <div class="blockRightTitle02">[item.title]</div>
+                    <div class="blockRightTxt02">[item.description]</div>
+                </li>
+                @*[/VIEW]
+                [/VIEW]*@
+            </ul>
+        </div>
+
+
+
+    </div>
+
+    <div class="blockVideoPlace">
+        <div class="blockVideo">
+            <div class="blockVideoPlayback">
+                <div class="edit-button" data-size="180" data-type="2" data-position="6"><img src="/data/images/edit-icon.png"></div>
+                @*[VIEW table="DS_ContentAds,DS_Ads(DS_Ads.id=DS_ContentAds.ad_id)" select_fields="DS_Ads.*,DS_ContentAds.interval,DS_ContentAds.id content_ad_id" id="ad" where="DS_Ads.passed_minutes < DS_Ads.max_minutes  AND  DS_ContentAds.position=6  AND  DS_ContentAds.content_id=[@NURL.content_id]"]
+                [VIEW table="DS_AdItems" id="item" where="ad_id=[ad.id]"]*@
+                <video width="100%" height="100%" class="video" id="video" preload="metadata" data-content_ad_id="[ad.content_ad_id]" data-ad_title="[ad.title]">
+                    <source src="/modules/DigitalSignage/data/ads/movies/[item.file_name]" type='video/mp4'>
+                </video>
+                @*[/VIEW]
+                [/VIEW]
+                [VIEW table="DS_ContentAds,DS_Lives(DS_Lives.id=DS_ContentAds.live_id)" select_fields="DS_Lives.*,DS_ContentAds.interval,DS_ContentAds.id content_ad_id" id="ad" where="DS_ContentAds.position=6  AND  DS_ContentAds.content_id=[@NURL.content_id]"]
+                [@MODULE.DigitalSignage.live_tv_player]
+                [/VIEW]*@
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="blockFooter">
+        <div class="blockFooterRight">
+            <div id="clockPlace">
+                <div class="placeWeatherTimeDate">
+                    <div id="weather"></div>
+                    <div class="clockFlip placeClock"></div>
+                    <div class="message txtDate placeDate"><span id="Shamsi_Date"></span></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="blockFooter01 emphasize-dark">
+            <div class="edit-button" data-size="180" data-type="1" data-position="1"><img src="/data/images/edit-icon.png"></div>
+            <ul class="slider-animation" id="slideshow01">
+                @*[VIEW table="DS_ContentAds,DS_Ads(DS_Ads.id=DS_ContentAds.ad_id)" select_fields="DS_Ads.*,DS_ContentAds.interval,DS_ContentAds.id content_ad_id" id="ad" where="DS_Ads.passed_minutes < DS_Ads.max_minutes  AND  DS_ContentAds.position=1  AND  DS_ContentAds.content_id=[@NURL.content_id]"]
+                [VIEW table="DS_AdItems" id="item" where="ad_id=[ad.id]"]*@
+                <li data-id="[ad.id]" data-interval="[ad.interval]" data-content_ad_id="[ad.content_ad_id]" data-ad_title="[ad.title]"><img src="/modules/general/thumbnail_width.aspx?width=260&file=/modules/DigitalSignage/data/ads/images/[item.file_name]" width="260" height="180" alt=""></li>
+                @*[/VIEW]
+                [/VIEW]*@
+            </ul>
+        </div>
+        <div class="blockFooter02 emphasize-dark">
+            <div class="edit-button" data-size="180" data-type="1" data-position="2"><img src="/data/images/edit-icon.png"></div>
+            <ul class="slider-animation" id="slideshow02">
+                @*[VIEW table="DS_ContentAds,DS_Ads(DS_Ads.id=DS_ContentAds.ad_id)" select_fields="DS_Ads.*,DS_ContentAds.interval,DS_ContentAds.id content_ad_id" id="ad" where="DS_Ads.passed_minutes < DS_Ads.max_minutes  AND  DS_ContentAds.position=2  AND  DS_ContentAds.content_id=[@NURL.content_id]"]
+                [VIEW table="DS_AdItems" id="item" where="ad_id=[ad.id]"]*@
+                <li data-id="[ad.id]" data-interval="[ad.interval]" data-content_ad_id="[ad.content_ad_id]" data-ad_title="[ad.title]"><img src="/modules/general/thumbnail_width.aspx?width=260&file=/modules/DigitalSignage/data/ads/images/[item.file_name]" width="260" height="180" alt=""></li>
+                @*[/VIEW]
+                [/VIEW]*@
+            </ul>
+        </div>
+        <div class="blockFooter03 emphasize-dark">
+            <div class="edit-button" data-size="180" data-type="1" data-position="3"><img src="/data/images/edit-icon.png"></div>
+            <ul class="slider-animation" id="slideshow03">
+                @*[VIEW table="DS_ContentAds,DS_Ads(DS_Ads.id=DS_ContentAds.ad_id)" select_fields="DS_Ads.*,DS_ContentAds.interval,DS_ContentAds.id content_ad_id" id="ad" where="DS_Ads.passed_minutes < DS_Ads.max_minutes  AND  DS_ContentAds.position=3  AND  DS_ContentAds.content_id=[@NURL.content_id]"]
+                [VIEW table="DS_AdItems" id="item" where="ad_id=[ad.id]"]*@
+                <li data-id="[ad.id]" data-interval="[ad.interval]" data-content_ad_id="[ad.content_ad_id]" data-ad_title="[ad.title]"><img src="/modules/general/thumbnail_width.aspx?width=260&file=/modules/DigitalSignage/data/ads/images/[item.file_name]" width="260" height="180" alt=""></li>
+                @*[/VIEW]
+                [/VIEW]*@
+            </ul>
+        </div>
+
+    </div>
+
+
+</div>
+

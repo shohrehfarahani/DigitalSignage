@@ -1,0 +1,324 @@
+﻿///* wrote by Nasrin khodayari
+// 11/2015
+// */
+//application.factory('compileGridData',['$compile','$injector','SortFields','sortFactory', 
+//                                       function ($compile , $injector , SortFields,sortFactory) {
+//	return {
+//		createGrid: function (Data, scope , gridColOptions , gridName) {
+//			var elmnt;
+//			var selectedUI;
+//			var repeater;
+//			var grid = document.getElementsByTagName('icGrid');
+//			for ( var i = 0; i < grid.length; i++) {
+//				var currentGrid = grid[i].getAttribute('ic-grid');
+//				if(currentGrid == gridName){
+//					selectedUI = grid[i];
+//					if(selectedUI.childNodes[0] != undefined)
+//						selectedUI.removeChild(selectedUI.childNodes[0]);
+//					repeater = Data;
+//				}
+//			}
+//			objKey = this.getObjectTitleAndOptions(Object.keys(repeater[0]) ,gridColOptions , gridName);
+//			var gridSearchTable = gridOption.gridSearchTableHeader;
+//			gridSearchTable += gridOption.gridSearchTableHeaderChkPlace;
+//			gridSearchTable += gridOption.gridSearchTableHeaderRowNo;
+//			scope.data = [];
+//			for (i in objKey) {
+//				if(objKey[i].name  != '_id' && objKey[i].name  != 'id'){
+////					var tmp = scope.data.objKey[i].name;
+//					gridSearchTable += '<th class="col'+objKey[i].colSize+'"><input id="" tabindex="" ng-model=';
+//					gridSearchTable += objKey[i].name;
+//					gridSearchTable += ' ng-enter="search('+"'0'"+','+"'pagination'"+')" class="txtInputSearch clearable" type="text" placeholder=""></th>';
+//				}
+//			}
+//			gridSearchTable += gridOption.gridSearchTableColBtn + gridOption.gridSearchTableFooter;
+//
+//			var gridHeaderUI = gridSearchTable+ gridOption.gridHeaderTable + gridOption.gridHeaderTableRowChkPlace;
+//
+//			for (i in objKey) {
+//				if(objKey[i].name == '_id')
+//					gridHeaderUI += gridOption.gridHeaderTableRowNo;
+//			}
+//
+//			for (i in objKey) {
+//				if(objKey[i].name != '_id' && objKey[i].name != 'id'){
+//					gridHeaderUI += '<th class="col'+objKey[i].colSize+'"><a ng-click="sort('+"'"+objKey[i].name+"'"+','+"'#gridCustomTable tbody tr'"+')"><span class="icon '+objKey[i].name+' non" data-icon="&#xe256;">'+
+//					'</span><span class="icon '+objKey[i].name+' true" data-icon="&#xe246;" style="display: none"></span>'+ 
+//					'<span class="icon '+objKey[i].name+' false" data-icon="&#xe249;" style="display: none"></span>'+
+//					objKey[i].displayName + '</a></th>';
+//				}
+//			}
+//			gridHeaderUI +=  gridOption.gridHeaderTableColBtn + gridOption.gridHeaderTableFooter;
+//			var gridBodyUI = gridHeaderUI + gridOption.gridBodyUIHeader;
+//
+//			for (i in repeater) {
+//				var fields = repeater[i];
+//
+//				gridBodyUI += '<tr><td><input type="checkbox" id="' + fields.id + '" ng-click="chkClick(' + fields.id + ')"/></td>';
+//				for (var j = 0 ; j < objKey.length ; j++) {
+//					if(objKey[j].name == '_id'){		
+//						gridBodyUI += "<td>{{'"+ fields[objKey[j].name]+"'}}</td>";
+//					}
+//
+//				}
+//				for (var j = 0 ; j < objKey.length ; j++) {
+//					if(objKey[j].name != '_id' && objKey[j].name != 'id')
+//						gridBodyUI += "<td>{{'"+ fields[objKey[j].name]+"'}}</td>";
+//				}
+//				gridBodyUI += '<td><a ng-click="detail(' + fields.id + ')" target="_blank" class="btnGridAction"><span class="icon" data-icon="&#xe0b7;"></span></a></td>';
+//				gridBodyUI += "</tr>";
+//			}
+//			gridBodyUI += gridOption.gridBodyUIFooter;
+//
+//			scope.sort = function(sortField , currentTable) {
+//
+//				if($(currentTable).length>0)
+//				{
+//					sortFactory.getGridOptionsWithCachData(scope);
+//				}
+//			};
+//			scope.search = function(pageNumber , type){
+//
+////				if(scope.tmpSearchData.bankType == 0){
+////				FoundationApi.publish('main-notifications', { title: Warning_Title, content: DBType ,autoclose:"3000", color:"warning"});
+////				return;
+////				}
+//				scope.searchByExample(pageNumber,scope.pageSize , type);
+//			};
+//			if (angular.isDefined(gridBodyUI)) {
+//				// compile the provided template against the current scope
+//				elmnt = $compile(gridBodyUI)(scope);
+//				selectedUI.appendChild(elmnt[0]);
+//			}
+//		},
+//		getObjectTitleAndOptions : function (objKey ,gridColOptions ,gridName) {
+//			var finalArray = new Array();
+//			for (var i = 0 ; i < objKey.length ; i++) {
+//				var obj = new Object();
+//				obj.id = i;
+//				obj.name = objKey[i];
+//				obj.displayName = convertDisplayNameToFarsi(objKey[i] , gridName);
+//				obj.colSize = gridDefaultOptions.defaultColSize;
+//				obj.colPriority = gridDefaultOptions.defaultcolPriority; 
+//				if(gridColOptions)
+//					for ( var iGridColOption = 0 ; iGridColOption < gridColOptions.length ; iGridColOption++) {
+//						if(objKey[i] == gridColOptions[iGridColOption].fieldName){
+//							obj.colSize = gridColOptions[iGridColOption].colSize;
+//							obj.colPriority = gridColOptions[iGridColOption].colPriority; 
+//						}
+//					}
+//				finalArray.push(obj);
+//			}
+//			finalArray.sort(compare);
+//			return finalArray;
+//		},
+//
+//		rootEmptyGrid : function() {
+//			$("[ic-grid]").html('');
+//			$("[ic-paging]").html('');
+//		},
+//		createPaging : function(scope , gridName) {
+//
+//			var gridPaging = document.getElementsByTagName('icGridPaging');
+////			gridPaging[0].setAttribute('html','');
+//			var pagingSelector = gridPaging[0];
+//			if(pagingSelector.childNodes[0] != undefined)
+//				pagingSelector.removeChild(pagingSelector.childNodes[0]);
+//			var currentGridPaging = gridPaging[0].getAttribute('ic-gridPaging');
+//			if(currentGridPaging != gridName)
+//				return;
+//
+//			//**************************************************************************************************************//
+//			var gridPaging ='<div class="blockCustom blockGrayBot"><br><div class="grid-block">';
+//			gridPaging += '<div class="medium-1 large-1 grid-content"><div class="grid-block"><div class="medium-6 large-6 grid-content paginstionTxtRowTotal">کل</div>';
+//			gridPaging += '<div class="medium-6 large-6 grid-content paginstionTxtRowTotal _totalGridCount total_'+gridName+'" id="total"></div></div></div>';
+//			gridPaging += '<div class="medium-9 large-9 grid-content pagination_'+gridName+'"><input type="hidden" id="current_page" /><ul class="paginationCustom _'+gridName+'"></ul></div>';
+//			gridPaging += '<div class="medium-2 large-2 grid-content" ng-show="pageSizer">';
+//			gridPaging += '<select class="labelFormDropDown" ng-model="x.pageSize"'
+//				+'ng-init="x.pageSize = x.pageSize"'
+//				+'ng-change="changePageSize(x.pageSize)">'
+//				+'<option value="10">10</option>'
+//				+'<option value="20">20</option>'
+//				+'<option value="50">50</option>'
+//				+'</select></div></div></div></div>';
+//			//*************************************************************************************************************//
+//			if (angular.isDefined(gridPaging)) {
+//				// compile the provided template against the current scope
+//				var elmnt = $compile(gridPaging)(scope);
+//				pagingSelector.appendChild(elmnt[0]);
+//			}
+//		},
+//
+//	};
+//}]);
+//
+//application.factory('compileSortedGridData',['$compile','SortFields', 
+//                                       function ($compile , SortFields) {
+//	return {
+//		createGrid: function (Data, scope , gridColOptions , gridName) {
+//			var elmnt;
+//			var selectedUI;
+//			var repeater;
+//			var grid = document.getElementsByTagName('icGrid');
+//			for ( var i = 0; i < grid.length; i++) {
+//				var currentGrid = grid[i].getAttribute('ic-grid');
+//				if(currentGrid == gridName){
+//					selectedUI = grid[i];
+//					if(selectedUI.childNodes[0] != undefined)
+//						selectedUI.removeChild(selectedUI.childNodes[0]);
+//					repeater = Data;
+//				}
+//			}
+//			objKey = this.getObjectTitleAndOptions(Object.keys(repeater[0]) ,gridColOptions , gridName);
+//			var gridSearchTable = gridOption.gridSearchTableHeader;
+//			gridSearchTable += gridOption.gridSearchTableHeaderChkPlace;
+//			gridSearchTable += gridOption.gridSearchTableHeaderRowNo;
+//			scope.data = [];
+//			for (i in objKey) {
+//				if(objKey[i].name  != '_id' && objKey[i].name  != 'id'){
+////					var tmp = scope.data.objKey[i].name;
+//					gridSearchTable += '<th class="col'+objKey[i].colSize+'"><input id="" tabindex="" ng-model=';
+//					gridSearchTable += objKey[i].name;
+//					gridSearchTable += ' ng-enter="search('+"'0'"+','+"'pagination'"+')" class="txtInputSearch clearable" type="text" placeholder=""></th>';
+//				}
+//			}
+//			gridSearchTable += gridOption.gridSearchTableColBtn + gridOption.gridSearchTableFooter;
+//
+//			var gridHeaderUI = gridSearchTable+ gridOption.gridHeaderTable + gridOption.gridHeaderTableRowChkPlace;
+//
+//			for (i in objKey) {
+//				if(objKey[i].name == '_id')
+//					gridHeaderUI += gridOption.gridHeaderTableRowNo;
+//			}
+//
+//			for (i in objKey) {
+//				if(objKey[i].name != '_id' && objKey[i].name != 'id'){
+//					gridHeaderUI += '<th class="col'+objKey[i].colSize+'"><a ng-click="sort('+"'"+objKey[i].name+"'"+','+"'#gridCustomTable tbody tr'"+')"><span class="icon '+objKey[i].name+' non" data-icon="&#xe256;">'+
+//					'</span><span class="icon '+objKey[i].name+' true" data-icon="&#xe246;" style="display: none"></span>'+ 
+//					'<span class="icon '+objKey[i].name+' false" data-icon="&#xe249;" style="display: none"></span>'+
+//					objKey[i].displayName + '</a></th>';
+//				}
+//			}
+//			gridHeaderUI +=  gridOption.gridHeaderTableColBtn + gridOption.gridHeaderTableFooter;
+//			var gridBodyUI = gridHeaderUI + gridOption.gridBodyUIHeader;
+//
+//			for (i in repeater) {
+//				var fields = repeater[i];
+//
+//				gridBodyUI += '<tr><td><input type="checkbox" id="' + fields.id + '" ng-click="chkClick(' + fields.id + ')"/></td>';
+//				for (var j = 0 ; j < objKey.length ; j++) {
+//					if(objKey[j].name == '_id'){		
+//						gridBodyUI += "<td>{{'"+ fields[objKey[j].name]+"'}}</td>";
+//					}
+//
+//				}
+//				for (var j = 0 ; j < objKey.length ; j++) {
+//					if(objKey[j].name != '_id' && objKey[j].name != 'id')
+//						gridBodyUI += "<td>{{'"+ fields[objKey[j].name]+"'}}</td>";
+//				}
+//				gridBodyUI += '<td><a ng-click="detail(' + fields.id + ')" target="_blank" class="btnGridAction"><span class="icon" data-icon="&#xe0b7;"></span></a></td>';
+//				gridBodyUI += "</tr>";
+//			}
+//			gridBodyUI += gridOption.gridBodyUIFooter;
+//
+////			scope.sort = function(sortField , currentTable) {
+////
+////				if($(currentTable).length>0)
+////				{
+////					sortFactory.getGridOptionsWithCachData(scope);
+////				}
+////			};
+////			scope.search = function(pageNumber , type){
+////
+//////				if(scope.tmpSearchData.bankType == 0){
+//////				FoundationApi.publish('main-notifications', { title: Warning_Title, content: DBType ,autoclose:"3000", color:"warning"});
+//////				return;
+//////				}
+////				scope.searchByExample(pageNumber,scope.pageSize , type);
+////			};
+//			if (angular.isDefined(gridBodyUI)) {
+//				// compile the provided template against the current scope
+//				elmnt = $compile(gridBodyUI)(scope);
+//				selectedUI.appendChild(elmnt[0]);
+//			}
+//		},
+//		getObjectTitleAndOptions : function (objKey ,gridColOptions ,gridName) {
+//			var finalArray = new Array();
+//			for (var i = 0 ; i < objKey.length ; i++) {
+//				var obj = new Object();
+//				obj.id = i;
+//				obj.name = objKey[i];
+//				obj.displayName = convertDisplayNameToFarsi(objKey[i] , gridName);
+//				obj.colSize = gridDefaultOptions.defaultColSize;
+//				obj.colPriority = gridDefaultOptions.defaultcolPriority; 
+//				if(gridColOptions)
+//					for ( var iGridColOption = 0 ; iGridColOption < gridColOptions.length ; iGridColOption++) {
+//						if(objKey[i] == gridColOptions[iGridColOption].fieldName){
+//							obj.colSize = gridColOptions[iGridColOption].colSize;
+//							obj.colPriority = gridColOptions[iGridColOption].colPriority; 
+//						}
+//					}
+//				finalArray.push(obj);
+//			}
+//			finalArray.sort(compare);
+//			return finalArray;
+//		},
+//
+//		rootEmptyGrid : function() {
+//			$("[ic-grid]").html('');
+//			$("[ic-paging]").html('');
+//		},
+//		createPaging : function(scope , gridName) {
+//
+//			var gridPaging = document.getElementsByTagName('icGridPaging');
+////			gridPaging[0].setAttribute('html','');
+//			var pagingSelector = gridPaging[0];
+//			if(pagingSelector.childNodes[0] != undefined)
+//				pagingSelector.removeChild(pagingSelector.childNodes[0]);
+//			var currentGridPaging = gridPaging[0].getAttribute('ic-gridPaging');
+//			if(currentGridPaging != gridName)
+//				return;
+//
+//			//**************************************************************************************************************//
+//			var gridPaging ='<div class="blockCustom blockGrayBot"><br><div class="grid-block">';
+//			gridPaging += '<div class="medium-1 large-1 grid-content"><div class="grid-block"><div class="medium-6 large-6 grid-content paginstionTxtRowTotal">کل</div>';
+//			gridPaging += '<div class="medium-6 large-6 grid-content paginstionTxtRowTotal _totalGridCount total_'+gridName+'" id="total"></div></div></div>';
+//			gridPaging += '<div class="medium-9 large-9 grid-content pagination_'+gridName+'"><input type="hidden" id="current_page" /><ul class="paginationCustom _'+gridName+'"></ul></div>';
+//			gridPaging += '<div class="medium-2 large-2 grid-content" ng-show="pageSizer">';
+//			gridPaging += '<select class="labelFormDropDown" ng-model="x.pageSize"'
+//				+'ng-init="x.pageSize = x.pageSize"'
+//				+'ng-change="changePageSize(x.pageSize)">'
+//				+'<option value="10">10</option>'
+//				+'<option value="20">20</option>'
+//				+'<option value="50">50</option>'
+//				+'</select></div></div></div></div>';
+//			//*************************************************************************************************************//
+//			if (angular.isDefined(gridPaging)) {
+//				// compile the provided template against the current scope
+//				var elmnt = $compile(gridPaging)(scope);
+//				pagingSelector.appendChild(elmnt[0]);
+//			}
+//		},
+//
+//	};
+//}]);
+//
+//function resetGridColOptions() {
+//	gridColOptions = {
+//			'fieldName' : null,
+//			'colSize' : gridDefaultOptions.defaultColSize,
+//			'colPriority' : gridDefaultOptions.defaultcolPriority
+//	};
+//};
+//
+//function compare(a,b) {
+//	if (a.colPriority < b.colPriority)
+//		return -1;
+//	if (a.colPriority > b.colPriority)
+//		return 1;
+//	return 0;
+//};
+//
+//
+//
+//
