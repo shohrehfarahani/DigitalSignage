@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8b8167e7-0843-47ee-bc6d-d25c00b85c11" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="aa972dee-248f-4bec-b0e5-f270ce3b0679" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:14985/Services/ads.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ads.xsd" MetadataType="Schema" ID="d0a4c4bd-9e30-452e-9786-28a89d315255" SourceId="1" SourceUrl="http://localhost:14985/Services/ads.svc?xsd=xsd1" />
-    <MetadataFile FileName="ads1.xsd" MetadataType="Schema" ID="390e7d8f-77ca-4c9a-a8fa-7c1aea22f6a6" SourceId="1" SourceUrl="http://localhost:14985/Services/ads.svc?xsd=xsd3" />
-    <MetadataFile FileName="ads.wsdl" MetadataType="Wsdl" ID="1eeb90ef-27ed-4c02-b2ef-b165f1576dc0" SourceId="1" SourceUrl="http://localhost:14985/Services/ads.svc?wsdl" />
-    <MetadataFile FileName="ads2.xsd" MetadataType="Schema" ID="bc9b012f-f9b1-48c4-9840-db214e949ada" SourceId="1" SourceUrl="http://localhost:14985/Services/ads.svc?xsd=xsd0" />
-    <MetadataFile FileName="ads3.xsd" MetadataType="Schema" ID="0437efd7-24c6-4410-8693-96df518e5be4" SourceId="1" SourceUrl="http://localhost:14985/Services/ads.svc?xsd=xsd2" />
+    <MetadataFile FileName="ads.xsd" MetadataType="Schema" ID="257c9406-2a55-445c-b640-b18825ab75f1" SourceId="1" SourceUrl="http://localhost:14985/Services/ads.svc?xsd=xsd1" />
+    <MetadataFile FileName="ads1.xsd" MetadataType="Schema" ID="3c4db8dc-cd18-457d-a99a-023450232df5" SourceId="1" SourceUrl="http://localhost:14985/Services/ads.svc?xsd=xsd3" />
+    <MetadataFile FileName="ads.wsdl" MetadataType="Wsdl" ID="cae612d0-adf1-4531-94a2-8546ad6b703e" SourceId="1" SourceUrl="http://localhost:14985/Services/ads.svc?wsdl" />
+    <MetadataFile FileName="ads2.xsd" MetadataType="Schema" ID="87fbdf6d-c9a5-421b-9466-23f0de477311" SourceId="1" SourceUrl="http://localhost:14985/Services/ads.svc?xsd=xsd0" />
+    <MetadataFile FileName="ads3.xsd" MetadataType="Schema" ID="66d9679f-9975-4f2f-b211-4ff3cfb0fffa" SourceId="1" SourceUrl="http://localhost:14985/Services/ads.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

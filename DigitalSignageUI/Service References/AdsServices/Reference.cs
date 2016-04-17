@@ -473,174 +473,6 @@ namespace DigitalSignageUI.AdsServices {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ResultMessageOfstring", Namespace="http://schemas.datacontract.org/2004/07/Aryaban.Engine.Core.WebService")]
-    [System.SerializableAttribute()]
-    public partial class ResultMessageOfstring : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private DigitalSignageUI.AdsServices.Result resultField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string resultSetField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public DigitalSignageUI.AdsServices.Result result {
-            get {
-                return this.resultField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.resultField, value) != true)) {
-                    this.resultField = value;
-                    this.RaisePropertyChanged("result");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string resultSet {
-            get {
-                return this.resultSetField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.resultSetField, value) != true)) {
-                    this.resultSetField = value;
-                    this.RaisePropertyChanged("resultSet");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Result", Namespace="http://schemas.datacontract.org/2004/07/Aryaban.Engine.Core.WebService")]
-    [System.SerializableAttribute()]
-    public partial class Result : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string callbackField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string messageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string redirectUrlField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private DigitalSignageUI.AdsServices.Result.state statusField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string callback {
-            get {
-                return this.callbackField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.callbackField, value) != true)) {
-                    this.callbackField = value;
-                    this.RaisePropertyChanged("callback");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string message {
-            get {
-                return this.messageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.messageField, value) != true)) {
-                    this.messageField = value;
-                    this.RaisePropertyChanged("message");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string redirectUrl {
-            get {
-                return this.redirectUrlField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.redirectUrlField, value) != true)) {
-                    this.redirectUrlField = value;
-                    this.RaisePropertyChanged("redirectUrl");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public DigitalSignageUI.AdsServices.Result.state status {
-            get {
-                return this.statusField;
-            }
-            set {
-                if ((this.statusField.Equals(value) != true)) {
-                    this.statusField = value;
-                    this.RaisePropertyChanged("status");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-        [System.Runtime.Serialization.DataContractAttribute(Name="Result.state", Namespace="http://schemas.datacontract.org/2004/07/Aryaban.Engine.Core.WebService")]
-        public enum state : int {
-            
-            [System.Runtime.Serialization.EnumMemberAttribute()]
-            error = 0,
-            
-            [System.Runtime.Serialization.EnumMemberAttribute()]
-            success = 1,
-            
-            [System.Runtime.Serialization.EnumMemberAttribute()]
-            warning = 2,
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PagingInfo", Namespace="http://schemas.datacontract.org/2004/07/DigitalServices.Model")]
     [System.SerializableAttribute()]
     public partial class PagingInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -763,128 +595,6 @@ namespace DigitalSignageUI.AdsServices {
                 if ((object.ReferenceEquals(this.sortTypeField, value) != true)) {
                     this.sortTypeField = value;
                     this.RaisePropertyChanged("sortType");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ResultMessageOfArrayOfAdsInfoWTONurSmnnE", Namespace="http://schemas.datacontract.org/2004/07/Aryaban.Engine.Core.WebService")]
-    [System.SerializableAttribute()]
-    public partial class ResultMessageOfArrayOfAdsInfoWTONurSmnnE : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private DigitalSignageUI.AdsServices.Result resultField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private DigitalSignageUI.AdsServices.AdsInfoWTO[] resultSetField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public DigitalSignageUI.AdsServices.Result result {
-            get {
-                return this.resultField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.resultField, value) != true)) {
-                    this.resultField = value;
-                    this.RaisePropertyChanged("result");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public DigitalSignageUI.AdsServices.AdsInfoWTO[] resultSet {
-            get {
-                return this.resultSetField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.resultSetField, value) != true)) {
-                    this.resultSetField = value;
-                    this.RaisePropertyChanged("resultSet");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ResultMessageOfArrayOfAdsIemInfoWTONurSmnnE", Namespace="http://schemas.datacontract.org/2004/07/Aryaban.Engine.Core.WebService")]
-    [System.SerializableAttribute()]
-    public partial class ResultMessageOfArrayOfAdsIemInfoWTONurSmnnE : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private DigitalSignageUI.AdsServices.Result resultField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private DigitalSignageUI.AdsServices.AdsIemInfoWTO[] resultSetField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public DigitalSignageUI.AdsServices.Result result {
-            get {
-                return this.resultField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.resultField, value) != true)) {
-                    this.resultField = value;
-                    this.RaisePropertyChanged("result");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public DigitalSignageUI.AdsServices.AdsIemInfoWTO[] resultSet {
-            get {
-                return this.resultSetField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.resultSetField, value) != true)) {
-                    this.resultSetField = value;
-                    this.RaisePropertyChanged("resultSet");
                 }
             }
         }
@@ -1072,118 +782,57 @@ namespace DigitalSignageUI.AdsServices {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ResultMessageOfArrayOfLiveTVInfoWTONurSmnnE", Namespace="http://schemas.datacontract.org/2004/07/Aryaban.Engine.Core.WebService")]
-    [System.SerializableAttribute()]
-    public partial class ResultMessageOfArrayOfLiveTVInfoWTONurSmnnE : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private DigitalSignageUI.AdsServices.Result resultField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private DigitalSignageUI.AdsServices.LiveTVInfoWTO[] resultSetField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public DigitalSignageUI.AdsServices.Result result {
-            get {
-                return this.resultField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.resultField, value) != true)) {
-                    this.resultField = value;
-                    this.RaisePropertyChanged("result");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public DigitalSignageUI.AdsServices.LiveTVInfoWTO[] resultSet {
-            get {
-                return this.resultSetField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.resultSetField, value) != true)) {
-                    this.resultSetField = value;
-                    this.RaisePropertyChanged("resultSet");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AdsServices.Iads")]
     public interface Iads {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Iads/saveAds", ReplyAction="http://tempuri.org/Iads/saveAdsResponse")]
-        DigitalSignageUI.AdsServices.ResultMessageOfstring saveAds(DigitalSignageUI.AdsServices.AdsInfoWTO AdsInfo);
+        Aryaban.Engine.Core.WebService.ResultMessage<string> saveAds(DigitalSignageUI.AdsServices.AdsInfoWTO AdsInfo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Iads/saveAds", ReplyAction="http://tempuri.org/Iads/saveAdsResponse")]
-        System.Threading.Tasks.Task<DigitalSignageUI.AdsServices.ResultMessageOfstring> saveAdsAsync(DigitalSignageUI.AdsServices.AdsInfoWTO AdsInfo);
+        System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<string>> saveAdsAsync(DigitalSignageUI.AdsServices.AdsInfoWTO AdsInfo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Iads/deleteAds", ReplyAction="http://tempuri.org/Iads/deleteAdsResponse")]
-        DigitalSignageUI.AdsServices.ResultMessageOfstring deleteAds(long id);
+        Aryaban.Engine.Core.WebService.ResultMessage<string> deleteAds(long id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Iads/deleteAds", ReplyAction="http://tempuri.org/Iads/deleteAdsResponse")]
-        System.Threading.Tasks.Task<DigitalSignageUI.AdsServices.ResultMessageOfstring> deleteAdsAsync(long id);
+        System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<string>> deleteAdsAsync(long id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Iads/deleteAdsItem", ReplyAction="http://tempuri.org/Iads/deleteAdsItemResponse")]
-        DigitalSignageUI.AdsServices.ResultMessageOfstring deleteAdsItem(long id);
+        Aryaban.Engine.Core.WebService.ResultMessage<string> deleteAdsItem(long id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Iads/deleteAdsItem", ReplyAction="http://tempuri.org/Iads/deleteAdsItemResponse")]
-        System.Threading.Tasks.Task<DigitalSignageUI.AdsServices.ResultMessageOfstring> deleteAdsItemAsync(long id);
+        System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<string>> deleteAdsItemAsync(long id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Iads/editAds", ReplyAction="http://tempuri.org/Iads/editAdsResponse")]
-        DigitalSignageUI.AdsServices.ResultMessageOfstring editAds(string title, string time, long ad_id);
+        Aryaban.Engine.Core.WebService.ResultMessage<string> editAds(string title, string time, long ad_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Iads/editAds", ReplyAction="http://tempuri.org/Iads/editAdsResponse")]
-        System.Threading.Tasks.Task<DigitalSignageUI.AdsServices.ResultMessageOfstring> editAdsAsync(string title, string time, long ad_id);
+        System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<string>> editAdsAsync(string title, string time, long ad_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Iads/searchDataOnAds", ReplyAction="http://tempuri.org/Iads/searchDataOnAdsResponse")]
-        DigitalSignageUI.AdsServices.ResultMessageOfArrayOfAdsInfoWTONurSmnnE searchDataOnAds(DigitalSignageUI.AdsServices.AdsInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging);
+        Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.AdsServices.AdsInfoWTO[]> searchDataOnAds(DigitalSignageUI.AdsServices.AdsInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Iads/searchDataOnAds", ReplyAction="http://tempuri.org/Iads/searchDataOnAdsResponse")]
-        System.Threading.Tasks.Task<DigitalSignageUI.AdsServices.ResultMessageOfArrayOfAdsInfoWTONurSmnnE> searchDataOnAdsAsync(DigitalSignageUI.AdsServices.AdsInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging);
+        System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.AdsServices.AdsInfoWTO[]>> searchDataOnAdsAsync(DigitalSignageUI.AdsServices.AdsInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Iads/searchDataOnAdsItem", ReplyAction="http://tempuri.org/Iads/searchDataOnAdsItemResponse")]
-        DigitalSignageUI.AdsServices.ResultMessageOfArrayOfAdsIemInfoWTONurSmnnE searchDataOnAdsItem(DigitalSignageUI.AdsServices.AdsIemInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging);
+        Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.AdsServices.AdsIemInfoWTO[]> searchDataOnAdsItem(DigitalSignageUI.AdsServices.AdsIemInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Iads/searchDataOnAdsItem", ReplyAction="http://tempuri.org/Iads/searchDataOnAdsItemResponse")]
-        System.Threading.Tasks.Task<DigitalSignageUI.AdsServices.ResultMessageOfArrayOfAdsIemInfoWTONurSmnnE> searchDataOnAdsItemAsync(DigitalSignageUI.AdsServices.AdsIemInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging);
+        System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.AdsServices.AdsIemInfoWTO[]>> searchDataOnAdsItemAsync(DigitalSignageUI.AdsServices.AdsIemInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Iads/searchDataOnTVLives", ReplyAction="http://tempuri.org/Iads/searchDataOnTVLivesResponse")]
-        DigitalSignageUI.AdsServices.ResultMessageOfArrayOfLiveTVInfoWTONurSmnnE searchDataOnTVLives(DigitalSignageUI.AdsServices.LiveTVInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging);
+        Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.AdsServices.LiveTVInfoWTO[]> searchDataOnTVLives(DigitalSignageUI.AdsServices.LiveTVInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Iads/searchDataOnTVLives", ReplyAction="http://tempuri.org/Iads/searchDataOnTVLivesResponse")]
-        System.Threading.Tasks.Task<DigitalSignageUI.AdsServices.ResultMessageOfArrayOfLiveTVInfoWTONurSmnnE> searchDataOnTVLivesAsync(DigitalSignageUI.AdsServices.LiveTVInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging);
+        System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.AdsServices.LiveTVInfoWTO[]>> searchDataOnTVLivesAsync(DigitalSignageUI.AdsServices.LiveTVInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Iads/getAdsWithItemDetail", ReplyAction="http://tempuri.org/Iads/getAdsWithItemDetailResponse")]
-        DigitalSignageUI.AdsServices.ResultMessageOfArrayOfAdsInfoWTONurSmnnE getAdsWithItemDetail(string type);
+        Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.AdsServices.AdsInfoWTO[]> getAdsWithItemDetail(string type);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Iads/getAdsWithItemDetail", ReplyAction="http://tempuri.org/Iads/getAdsWithItemDetailResponse")]
-        System.Threading.Tasks.Task<DigitalSignageUI.AdsServices.ResultMessageOfArrayOfAdsInfoWTONurSmnnE> getAdsWithItemDetailAsync(string type);
+        System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.AdsServices.AdsInfoWTO[]>> getAdsWithItemDetailAsync(string type);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1213,67 +862,67 @@ namespace DigitalSignageUI.AdsServices {
                 base(binding, remoteAddress) {
         }
         
-        public DigitalSignageUI.AdsServices.ResultMessageOfstring saveAds(DigitalSignageUI.AdsServices.AdsInfoWTO AdsInfo) {
+        public Aryaban.Engine.Core.WebService.ResultMessage<string> saveAds(DigitalSignageUI.AdsServices.AdsInfoWTO AdsInfo) {
             return base.Channel.saveAds(AdsInfo);
         }
         
-        public System.Threading.Tasks.Task<DigitalSignageUI.AdsServices.ResultMessageOfstring> saveAdsAsync(DigitalSignageUI.AdsServices.AdsInfoWTO AdsInfo) {
+        public System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<string>> saveAdsAsync(DigitalSignageUI.AdsServices.AdsInfoWTO AdsInfo) {
             return base.Channel.saveAdsAsync(AdsInfo);
         }
         
-        public DigitalSignageUI.AdsServices.ResultMessageOfstring deleteAds(long id) {
+        public Aryaban.Engine.Core.WebService.ResultMessage<string> deleteAds(long id) {
             return base.Channel.deleteAds(id);
         }
         
-        public System.Threading.Tasks.Task<DigitalSignageUI.AdsServices.ResultMessageOfstring> deleteAdsAsync(long id) {
+        public System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<string>> deleteAdsAsync(long id) {
             return base.Channel.deleteAdsAsync(id);
         }
         
-        public DigitalSignageUI.AdsServices.ResultMessageOfstring deleteAdsItem(long id) {
+        public Aryaban.Engine.Core.WebService.ResultMessage<string> deleteAdsItem(long id) {
             return base.Channel.deleteAdsItem(id);
         }
         
-        public System.Threading.Tasks.Task<DigitalSignageUI.AdsServices.ResultMessageOfstring> deleteAdsItemAsync(long id) {
+        public System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<string>> deleteAdsItemAsync(long id) {
             return base.Channel.deleteAdsItemAsync(id);
         }
         
-        public DigitalSignageUI.AdsServices.ResultMessageOfstring editAds(string title, string time, long ad_id) {
+        public Aryaban.Engine.Core.WebService.ResultMessage<string> editAds(string title, string time, long ad_id) {
             return base.Channel.editAds(title, time, ad_id);
         }
         
-        public System.Threading.Tasks.Task<DigitalSignageUI.AdsServices.ResultMessageOfstring> editAdsAsync(string title, string time, long ad_id) {
+        public System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<string>> editAdsAsync(string title, string time, long ad_id) {
             return base.Channel.editAdsAsync(title, time, ad_id);
         }
         
-        public DigitalSignageUI.AdsServices.ResultMessageOfArrayOfAdsInfoWTONurSmnnE searchDataOnAds(DigitalSignageUI.AdsServices.AdsInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging) {
+        public Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.AdsServices.AdsInfoWTO[]> searchDataOnAds(DigitalSignageUI.AdsServices.AdsInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging) {
             return base.Channel.searchDataOnAds(filter, paging);
         }
         
-        public System.Threading.Tasks.Task<DigitalSignageUI.AdsServices.ResultMessageOfArrayOfAdsInfoWTONurSmnnE> searchDataOnAdsAsync(DigitalSignageUI.AdsServices.AdsInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging) {
+        public System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.AdsServices.AdsInfoWTO[]>> searchDataOnAdsAsync(DigitalSignageUI.AdsServices.AdsInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging) {
             return base.Channel.searchDataOnAdsAsync(filter, paging);
         }
         
-        public DigitalSignageUI.AdsServices.ResultMessageOfArrayOfAdsIemInfoWTONurSmnnE searchDataOnAdsItem(DigitalSignageUI.AdsServices.AdsIemInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging) {
+        public Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.AdsServices.AdsIemInfoWTO[]> searchDataOnAdsItem(DigitalSignageUI.AdsServices.AdsIemInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging) {
             return base.Channel.searchDataOnAdsItem(filter, paging);
         }
         
-        public System.Threading.Tasks.Task<DigitalSignageUI.AdsServices.ResultMessageOfArrayOfAdsIemInfoWTONurSmnnE> searchDataOnAdsItemAsync(DigitalSignageUI.AdsServices.AdsIemInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging) {
+        public System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.AdsServices.AdsIemInfoWTO[]>> searchDataOnAdsItemAsync(DigitalSignageUI.AdsServices.AdsIemInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging) {
             return base.Channel.searchDataOnAdsItemAsync(filter, paging);
         }
         
-        public DigitalSignageUI.AdsServices.ResultMessageOfArrayOfLiveTVInfoWTONurSmnnE searchDataOnTVLives(DigitalSignageUI.AdsServices.LiveTVInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging) {
+        public Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.AdsServices.LiveTVInfoWTO[]> searchDataOnTVLives(DigitalSignageUI.AdsServices.LiveTVInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging) {
             return base.Channel.searchDataOnTVLives(filter, paging);
         }
         
-        public System.Threading.Tasks.Task<DigitalSignageUI.AdsServices.ResultMessageOfArrayOfLiveTVInfoWTONurSmnnE> searchDataOnTVLivesAsync(DigitalSignageUI.AdsServices.LiveTVInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging) {
+        public System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.AdsServices.LiveTVInfoWTO[]>> searchDataOnTVLivesAsync(DigitalSignageUI.AdsServices.LiveTVInfoWTO filter, DigitalSignageUI.AdsServices.PagingInfo paging) {
             return base.Channel.searchDataOnTVLivesAsync(filter, paging);
         }
         
-        public DigitalSignageUI.AdsServices.ResultMessageOfArrayOfAdsInfoWTONurSmnnE getAdsWithItemDetail(string type) {
+        public Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.AdsServices.AdsInfoWTO[]> getAdsWithItemDetail(string type) {
             return base.Channel.getAdsWithItemDetail(type);
         }
         
-        public System.Threading.Tasks.Task<DigitalSignageUI.AdsServices.ResultMessageOfArrayOfAdsInfoWTONurSmnnE> getAdsWithItemDetailAsync(string type) {
+        public System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.AdsServices.AdsInfoWTO[]>> getAdsWithItemDetailAsync(string type) {
             return base.Channel.getAdsWithItemDetailAsync(type);
         }
     }
