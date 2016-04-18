@@ -23,6 +23,7 @@
         $scope.viewData = [];
         $scope.viewDataPosition_6 = [];
         $scope.viewDataPosition_2_imageList = [];
+        $scope.viewDataPosition_45_TextList = [];
 
         httpRequest.post(service_loadContentsWithAdsItemDetail, dataObj, function (data) {
             $scope.viewData = data.resultSet;
@@ -50,7 +51,24 @@
                         }
                     }
                 }
+
+                if ($scope.viewData[posi].position == 4 || $scope.viewData[posi].position == 5) {// Text
+                    for (var txt_i = 0; txt_i < $scope.viewData[posi].itemList.length; txt_i++) {
+                        var contentObj = new Object();
+                        debugger
+                        contentObj.description = $scope.viewData[posi].itemList[txt_i].description;
+                        contentObj.id = $scope.viewData[posi].id;
+                        contentObj.interval = $scope.viewData[posi].interval;
+                        contentObj.content_ad_id = $scope.viewData[posi].content_ad_id;
+                        contentObj.title = $scope.viewData[posi].title;
+
+                        $scope.viewDataPosition_45_TextList.push(contentObj);
+                       
+                    }
+
+                }
             }
+            
         });
         $scope.weatherFun();
     }
@@ -83,7 +101,6 @@
         //    transitions: transitionsArray,
         //    // delay:5000
         //});
-        debugger
         $('#coin-slider').coinslider({ width: 280, height: 187, navigation: false, delay: 5000, spw: 4, sph: 4 });
     }
 

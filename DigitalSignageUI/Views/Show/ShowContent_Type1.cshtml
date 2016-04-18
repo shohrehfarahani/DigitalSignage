@@ -33,8 +33,8 @@
 <div class="rowB">
 
     <div class="marquee up">
-        <p>هم رسانی چگونه می توانید این مطلب را به دیگران برسانید</p>
-        <p>چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+        <p  ng-repeat="x in viewDataPosition_45_TextList" data-id="{{x.id}}" data-interval="{{x.interval}}" data-content_ad_id="{{x.content_ad_id}}" data-ad_title="{{x.title}}" >{{x.description}}</p>
+       
     </div>
 
 </div>
