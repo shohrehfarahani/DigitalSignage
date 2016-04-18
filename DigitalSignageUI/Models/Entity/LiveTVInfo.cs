@@ -15,6 +15,7 @@ namespace DigitalSignageUI.Models.Entity
         public string description { get; set; }
         public string channel { get; set; }
         public int interval { get; set; }
+        public int position { get; set; }
         public long content_ad_id { get; set; }
     }
 }

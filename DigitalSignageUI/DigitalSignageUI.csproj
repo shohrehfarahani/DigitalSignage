@@ -213,38 +213,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Scripts\angular-route.js" />
-    <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\angular.min.js.map" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\flowPlayer\flowplayer-3.2.13.min.js" />
-    <Content Include="Scripts\flowPlayer\flowplayer-3.2.16.swf" />
-    <Content Include="Scripts\flowPlayer\flowplayer.min.js" />
-    <Content Include="Scripts\flowPlayer\flowplayer.rtmp-3.2.12.swf" />
-    <Content Include="Scripts\forms.js" />
+    <Content Include="Skins\CSS_tvShow\flowPlayer\flowplayer-3.2.13.min.js" />
+    <Content Include="Skins\CSS_tvShow\flowPlayer\flowplayer-3.2.16.swf" />
+    <Content Include="Skins\CSS_tvShow\flowPlayer\flowplayer.min.js" />
+    <Content Include="Skins\CSS_tvShow\flowPlayer\flowplayer.rtmp-3.2.12.swf" />
     <Content Include="Scripts\FrontEndController\mainCtrlr.js" />
     <Content Include="Scripts\FrontEndController\showContentCtrlr.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\slider\flux.min.js" />
-    <Content Include="Scripts\util\uiUtil\util.js.svntmp" />
     <Content Include="Scripts\util\factories.js" />
     <Content Include="Scripts\util\forms.js" />
     <Content Include="Scripts\util\sourceNames.js" />
     <Content Include="Scripts\util\sourceFactories.js" />
-    <Content Include="Scripts\util\uiUtil\gridSetting.js" />
-    <Content Include="Scripts\util\uiUtil\gridTemplate.js" />
-    <Content Include="Scripts\util\uiUtil\objectNames.js" />
     <Content Include="Scripts\util\utils.js" />
     <None Include="Service References\AdsServices\ads.wsdl" />
     <None Include="Service References\AdsServices\ads.xsd">
@@ -414,8 +392,68 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Skins\Images\Content\block06BK.jpg" />
-    <Content Include="Skins\Style\Content\block06.css" />
+    <Content Include="Skins\CSS_tvShow\css\app.css" />
+    <Content Include="Skins\CSS_tvShow\css\coin-slider-styles.css" />
+    <Content Include="Skins\CSS_tvShow\css\index.html" />
+    <Content Include="Skins\CSS_tvShow\css\uicon.css" />
+    <Content Include="Skins\CSS_tvShow\css\wi.css" />
+    <Content Include="Skins\CSS_tvShow\fonts\artill_clean_icons-webfont.svg" />
+    <Content Include="Skins\CSS_tvShow\fonts\BYEKAN.svg" />
+    <Content Include="Skins\CSS_tvShow\fonts\index.html" />
+    <Content Include="Skins\CSS_tvShow\fonts\IranianSerif.svg" />
+    <Content Include="Skins\CSS_tvShow\fonts\uicon.svg" />
+    <Content Include="Skins\CSS_tvShow\icons-reference.html" />
+    <Content Include="Skins\CSS_tvShow\images\bkDefault.jpg" />
+    <Content Include="Skins\CSS_tvShow\images\bkText.png" />
+    <Content Include="Skins\CSS_tvShow\images\borderStyleDate.png" />
+    <Content Include="Skins\CSS_tvShow\images\borderStyleWeather.png" />
+    <Content Include="Skins\CSS_tvShow\images\favicon.ico" />
+    <Content Include="Skins\CSS_tvShow\images\favicon.png" />
+    <Content Include="Skins\CSS_tvShow\images\index.html" />
+    <Content Include="Skins\CSS_tvShow\images\logo.png" />
+    <Content Include="Skins\CSS_tvShow\images\userProfilePic.jpg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\account.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\action.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\ban.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\bell.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\bookmark.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\cart.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\chevron.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\circle-check.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\circle-x.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\cog.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\comment-square.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\dashboard.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\document.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\envelope.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\flag.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\home.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\lock.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\magnifying-glass.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\person.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\reload.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\share-boxed.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\star.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\thumb.svg" />
+    <Content Include="Skins\CSS_tvShow\img\iconic\zoom.svg" />
+    <Content Include="Skins\CSS_tvShow\js\app.js" />
+    <Content Include="Skins\CSS_tvShow\js\foundation.js" />
+    <Content Include="Skins\CSS_tvShow\js\routes.js" />
+    <Content Include="Skins\CSS_tvShow\js\templates.js" />
+    <Content Include="Skins\CSS_tvShow\script\coin-slider.js" />
+    <Content Include="Skins\CSS_tvShow\script\index.html" />
+    <Content Include="Skins\CSS_tvShow\script\jquery.js" />
+    <Content Include="Skins\CSS_tvShow\script\jquery.min.js" />
+    <Content Include="Skins\CSS_tvShow\script\jquery.simpleWeather.js" />
+    <Content Include="Skins\CSS_tvShow\script\jquery.simpleWeather.min.js" />
+    <Content Include="Skins\CSS_tvShow\script\jquery.transit.min.js" />
+    <Content Include="Skins\CSS_tvShow\script\modernizr.js" />
+    <Content Include="Skins\CSS_tvShow\slide\food01.jpg" />
+    <Content Include="Skins\CSS_tvShow\slide\food02.jpg" />
+    <Content Include="Skins\CSS_tvShow\slide\food03.jpg" />
+    <Content Include="Skins\CSS_tvShow\slide\index.html" />
+    <Content Include="Skins\CSS_tvShow\video\index.html" />
+    <Content Include="Skins\CSS_tvShow\video\SampleVideo_1280x720.mp4" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -427,7 +465,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Show\ShowContent.cshtml" />
     <None Include="Service References\TvsServices\tvs.wsdl" />
     <None Include="Service References\TvsServices\tvs.xsd">
@@ -447,13 +484,48 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Views\Error\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout_tvShow.cshtml" />
+    <Content Include="Views\Show\ShowContent_Type1.cshtml" />
+    <Content Include="Skins\CSS_tvShow\fonts\artill_clean_icons-webfont.eot" />
+    <Content Include="Skins\CSS_tvShow\fonts\artill_clean_icons-webfont.ttf" />
+    <Content Include="Skins\CSS_tvShow\fonts\artill_clean_icons-webfont.woff" />
+    <Content Include="Skins\CSS_tvShow\fonts\BCompset.eot" />
+    <Content Include="Skins\CSS_tvShow\fonts\BCompset.ttf" />
+    <Content Include="Skins\CSS_tvShow\fonts\BCompset.woff" />
+    <Content Include="Skins\CSS_tvShow\fonts\BMitra.eot" />
+    <Content Include="Skins\CSS_tvShow\fonts\BMitra.ttf" />
+    <Content Include="Skins\CSS_tvShow\fonts\BMitra.woff" />
+    <Content Include="Skins\CSS_tvShow\fonts\BMitraBd.eot" />
+    <Content Include="Skins\CSS_tvShow\fonts\BMitraBd.ttf" />
+    <Content Include="Skins\CSS_tvShow\fonts\BMitraBd.woff" />
+    <Content Include="Skins\CSS_tvShow\fonts\BNazaningholi.eot" />
+    <Content Include="Skins\CSS_tvShow\fonts\BNazaningholi.ttf" />
+    <Content Include="Skins\CSS_tvShow\fonts\BNazaningholi.woff" />
+    <Content Include="Skins\CSS_tvShow\fonts\BRoya.eot" />
+    <Content Include="Skins\CSS_tvShow\fonts\BRoya.ttf" />
+    <Content Include="Skins\CSS_tvShow\fonts\BRoya.woff" />
+    <Content Include="Skins\CSS_tvShow\fonts\BYekan.eot" />
+    <Content Include="Skins\CSS_tvShow\fonts\BYEKAN.TTF" />
+    <Content Include="Skins\CSS_tvShow\fonts\BYekan.woff" />
+    <Content Include="Skins\CSS_tvShow\fonts\IranianSerif.eot" />
+    <Content Include="Skins\CSS_tvShow\fonts\IranianSerif.ttf" />
+    <Content Include="Skins\CSS_tvShow\fonts\IranianSerif.woff" />
+    <Content Include="Skins\CSS_tvShow\fonts\nassim-bold.eot" />
+    <Content Include="Skins\CSS_tvShow\fonts\nassim-bold.ttf" />
+    <Content Include="Skins\CSS_tvShow\fonts\nassim-bold.woff" />
+    <Content Include="Skins\CSS_tvShow\fonts\nassim-regular.eot" />
+    <Content Include="Skins\CSS_tvShow\fonts\nassim-regular.ttf" />
+    <Content Include="Skins\CSS_tvShow\fonts\nassim-regular.woff" />
+    <Content Include="Skins\CSS_tvShow\fonts\uicon.eot" />
+    <Content Include="Skins\CSS_tvShow\fonts\uicon.ttf" />
+    <Content Include="Skins\CSS_tvShow\fonts\uicon.woff" />
+    <Content Include="Skins\CSS_tvShow\video\SampleVideo_1280x720.webm" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

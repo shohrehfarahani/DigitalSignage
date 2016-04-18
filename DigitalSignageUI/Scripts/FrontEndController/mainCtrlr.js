@@ -2,6 +2,7 @@
 application.controller('mainCtrlr',  mainCtrlr);
 function mainCtrlr($scope) {
     $scope.load = function () {
+        debugger
     };
     $scope.load();
 };

@@ -11,8 +11,15 @@ namespace DigitalSignageUI.Controllers
 {
     public class ShowController : Controller
     {
-        // GET: Default
+        
         public ActionResult ShowContent()
+        {
+            return View();
+        }
+
+
+        //Partial
+        public ActionResult ShowContent_Type1()
         {
             return View();
         }
@@ -20,12 +27,12 @@ namespace DigitalSignageUI.Controllers
 
         //Load Content
         [HttpPost]
-        public ActionResult loadContent(int position, long content_id)
+        public ActionResult loadContent( long content_id)
         {
 
             
             ContentProxy serviceProxy = new ContentProxy();
-            ResultMessage<List<AdsInfo>> contentList = serviceProxy.loadContentsWithAdsItemDetail(position, content_id);
+            ResultMessage<List<AdsInfo>> contentList = serviceProxy.loadContentsWithAdsItemDetail( content_id);
 
             if (contentList.result.status == Aryaban.Engine.Core.WebService.Result.state.error)
                 //Redirect To Error Page

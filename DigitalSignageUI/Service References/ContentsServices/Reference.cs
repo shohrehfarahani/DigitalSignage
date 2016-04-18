@@ -954,6 +954,9 @@ namespace DigitalSignageUI.ContentsServices {
         private int intervalField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int positionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int statusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1036,6 +1039,19 @@ namespace DigitalSignageUI.ContentsServices {
                 if ((this.intervalField.Equals(value) != true)) {
                     this.intervalField = value;
                     this.RaisePropertyChanged("interval");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int position {
+            get {
+                return this.positionField;
+            }
+            set {
+                if ((this.positionField.Equals(value) != true)) {
+                    this.positionField = value;
+                    this.RaisePropertyChanged("position");
                 }
             }
         }
@@ -1406,22 +1422,22 @@ namespace DigitalSignageUI.ContentsServices {
         System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<string>> editContentAdsAsync(DigitalSignageUI.ContentsServices.ContentOptionInfoWTO contentOptionInfo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Icontents/searchContentsWithAdsItemDetail", ReplyAction="http://tempuri.org/Icontents/searchContentsWithAdsItemDetailResponse")]
-        Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.AdsInfoWTO[]> searchContentsWithAdsItemDetail(string type, int position, long content_id);
+        Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.AdsInfoWTO[]> searchContentsWithAdsItemDetail(string type, long content_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Icontents/searchContentsWithAdsItemDetail", ReplyAction="http://tempuri.org/Icontents/searchContentsWithAdsItemDetailResponse")]
-        System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.AdsInfoWTO[]>> searchContentsWithAdsItemDetailAsync(string type, int position, long content_id);
+        System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.AdsInfoWTO[]>> searchContentsWithAdsItemDetailAsync(string type, long content_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Icontents/loadContentsWithAdsItemDetail", ReplyAction="http://tempuri.org/Icontents/loadContentsWithAdsItemDetailResponse")]
-        Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.AdsInfoWTO[]> loadContentsWithAdsItemDetail(int position, long content_id);
+        Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.AdsInfoWTO[]> loadContentsWithAdsItemDetail(long content_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Icontents/loadContentsWithAdsItemDetail", ReplyAction="http://tempuri.org/Icontents/loadContentsWithAdsItemDetailResponse")]
-        System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.AdsInfoWTO[]>> loadContentsWithAdsItemDetailAsync(int position, long content_id);
+        System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.AdsInfoWTO[]>> loadContentsWithAdsItemDetailAsync(long content_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Icontents/loadLiveContentsAds", ReplyAction="http://tempuri.org/Icontents/loadLiveContentsAdsResponse")]
-        Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.LiveTVInfoWTO[]> loadLiveContentsAds(int position, long content_id);
+        Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.LiveTVInfoWTO[]> loadLiveContentsAds(long content_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Icontents/loadLiveContentsAds", ReplyAction="http://tempuri.org/Icontents/loadLiveContentsAdsResponse")]
-        System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.LiveTVInfoWTO[]>> loadLiveContentsAdsAsync(int position, long content_id);
+        System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.LiveTVInfoWTO[]>> loadLiveContentsAdsAsync(long content_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Icontents/getContentList", ReplyAction="http://tempuri.org/Icontents/getContentListResponse")]
         Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.ContentInfoWTO[]> getContentList(DigitalSignageUI.ContentsServices.ContentInfoWTO filter, DigitalSignageUI.ContentsServices.PagingInfo paging);
@@ -1517,28 +1533,28 @@ namespace DigitalSignageUI.ContentsServices {
             return base.Channel.editContentAdsAsync(contentOptionInfo);
         }
         
-        public Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.AdsInfoWTO[]> searchContentsWithAdsItemDetail(string type, int position, long content_id) {
-            return base.Channel.searchContentsWithAdsItemDetail(type, position, content_id);
+        public Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.AdsInfoWTO[]> searchContentsWithAdsItemDetail(string type, long content_id) {
+            return base.Channel.searchContentsWithAdsItemDetail(type, content_id);
         }
         
-        public System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.AdsInfoWTO[]>> searchContentsWithAdsItemDetailAsync(string type, int position, long content_id) {
-            return base.Channel.searchContentsWithAdsItemDetailAsync(type, position, content_id);
+        public System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.AdsInfoWTO[]>> searchContentsWithAdsItemDetailAsync(string type, long content_id) {
+            return base.Channel.searchContentsWithAdsItemDetailAsync(type, content_id);
         }
         
-        public Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.AdsInfoWTO[]> loadContentsWithAdsItemDetail(int position, long content_id) {
-            return base.Channel.loadContentsWithAdsItemDetail(position, content_id);
+        public Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.AdsInfoWTO[]> loadContentsWithAdsItemDetail(long content_id) {
+            return base.Channel.loadContentsWithAdsItemDetail(content_id);
         }
         
-        public System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.AdsInfoWTO[]>> loadContentsWithAdsItemDetailAsync(int position, long content_id) {
-            return base.Channel.loadContentsWithAdsItemDetailAsync(position, content_id);
+        public System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.AdsInfoWTO[]>> loadContentsWithAdsItemDetailAsync(long content_id) {
+            return base.Channel.loadContentsWithAdsItemDetailAsync(content_id);
         }
         
-        public Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.LiveTVInfoWTO[]> loadLiveContentsAds(int position, long content_id) {
-            return base.Channel.loadLiveContentsAds(position, content_id);
+        public Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.LiveTVInfoWTO[]> loadLiveContentsAds(long content_id) {
+            return base.Channel.loadLiveContentsAds(content_id);
         }
         
-        public System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.LiveTVInfoWTO[]>> loadLiveContentsAdsAsync(int position, long content_id) {
-            return base.Channel.loadLiveContentsAdsAsync(position, content_id);
+        public System.Threading.Tasks.Task<Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.LiveTVInfoWTO[]>> loadLiveContentsAdsAsync(long content_id) {
+            return base.Channel.loadLiveContentsAdsAsync(content_id);
         }
         
         public Aryaban.Engine.Core.WebService.ResultMessage<DigitalSignageUI.ContentsServices.ContentInfoWTO[]> getContentList(DigitalSignageUI.ContentsServices.ContentInfoWTO filter, DigitalSignageUI.ContentsServices.PagingInfo paging) {

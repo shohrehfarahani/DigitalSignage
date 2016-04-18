@@ -1,0 +1,40 @@
+﻿<style>
+    .flowplayerVideo {
+        width: 100%;
+        min-width: 100%;
+        height: 100%;
+        min-height: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+</style>
+<div class="rowA" >
+    <div class="colAA">
+        <div class="colAArowA">
+            <div class="txt">
+                تاریخ و ساعت
+            </div>
+        </div>
+        <div id="weather" class="colAArowB">
+        </div>
+        <div class="colAArowC">
+            <div id="coin-slider">
+                <img ng-repeat="x in viewDataPosition_2_imageList"
+                     data-id="{{x.id}}" data-interval="{{x.interval}}" data-content_ad_id="{{x.content_ad_id}}" data-ad_title="{{x.title}}"
+                     src="{{imageSource}}{{x.file_name}}" width="280px" height="187px">
+            </div>
+        </div>
+    </div>
+    <div class="colAB">
+        <!--video-->
+        <div id="player" class="flowplayerVideo" data-ad_title="{{viewDataPosition_6.title}}"></div>
+    </div>
+</div>
+<div class="rowB">
+
+    <div class="marquee up">
+        <p>هم رسانی چگونه می توانید این مطلب را به دیگران برسانید</p>
+        <p>چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+    </div>
+
+</div>

@@ -1,90 +1,19 @@
-﻿<link href="~/Skins/Style/Content/block06.css" rel="stylesheet" />
+﻿
+
 <script src="~/Scripts/FrontEndController/showContentCtrlr.js"></script>
-<script src="~/Scripts/flowPlayer/flowplayer-3.2.13.min.js"></script>
-<script src="~/Scripts/slider/flux.min.js"></script>
+
 @{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout_tvShow.cshtml";
 }
- <style>
-    .flowplayerVideo {
-        width: 100%;
-        height: 100%;
-    }
-</style>
 
- 
-<div class="wrapper" ng-controller="showContentCtrlr">
-    <div class="blockRight">
-        <div class="blockRightTxtPlace">
-            <div class="edit-button" data-size="180" data-type="3" data-position="4" style="margin:20px;"><img src="/data/images/edit-icon.png"></div>
-            <ul class="slider-text slider-animation">
-                @*[VIEW table="DS_ContentAds,DS_Ads(DS_Ads.id=DS_ContentAds.ad_id)" select_fields="DS_Ads.*,DS_ContentAds.interval,DS_ContentAds.id content_ad_id" id="ad" where="DS_Ads.passed_minutes < DS_Ads.max_minutes  AND  DS_ContentAds.position=4  AND  DS_ContentAds.content_id=[@NURL.content_id]"]
-                [VIEW table="DS_AdItems" id="item" where="ad_id=[ad.id]"]*@
-                <li data-interval="[ad.interval]" data-content_ad_id="[ad.content_ad_id]" data-ad_title="[ad.title]">
-                    <div class="blockRightTitle02">[item.title]</div>
-                    <div class="blockRightTxt02">[item.description]</div>
-                </li>
-                @*[/VIEW]
-                [/VIEW]*@
-            </ul>
-            <div class="edit-button" data-size="180" data-type="3" data-position="5" style="margin:20px;"><img src="/data/images/edit-icon.png"></div>
-            <ul class="slider-text slider-animation">
-                @*[VIEW table="DS_ContentAds,DS_Ads(DS_Ads.id=DS_ContentAds.ad_id)" select_fields="DS_Ads.*,DS_ContentAds.interval,DS_ContentAds.id content_ad_id" id="ad" where="DS_Ads.passed_minutes < DS_Ads.max_minutes  AND  DS_ContentAds.position=5  AND  DS_ContentAds.content_id=[@NURL.content_id]"]
-                [VIEW table="DS_AdItems" id="item" where="ad_id=[ad.id]"]*@
-                <li data-interval="[ad.interval]" data-content_ad_id="[ad.content_ad_id]" data-ad_title="[ad.title]">
-                    <div class="blockRightTitle02">[item.title]</div>
-                    <div class="blockRightTxt02">[item.description]</div>
-                </li>
-                @*[/VIEW]
-                [/VIEW]*@
-            </ul>
-        </div>
-    </div>
-  
-    <div class="blockVideoPlace">
-        <div class="blockVideo">
-            <div class="blockVideoPlayback">
-                <div id="player" class="flowplayerVideo"  data-ad_title="{{viewDataPosition_6.title}}"></div>
-            </div>
-
-
-        </div>
-    </div>
-
-    <div class="blockFooter">
-        <div class="blockFooterRight">
-            <div id="clockPlace">
-                <div class="placeWeatherTimeDate">
-                    <div id="weather"></div>
-                    <div class="clockFlip placeClock"></div>
-                    <div class="message txtDate placeDate"><span id="Shamsi_Date"></span></div>
-                </div>
-
-            </div>
-
-        </div>
-
-        
-        <div class="blockFooter02 emphasize-dark">
-            <div class="edit-button" data-size="180" data-type="1" data-position="2">
-           @* <ul class="slider-animation" id="slider">*@
-                <section class="container">
-                    <div id="slider">
-                        @*<li data-id="[ad.id]" data-interval="[ad.interval]" data-content_ad_id="[ad.content_ad_id]" data-ad_title="[ad.title]"><img src="/modules/general/thumbnail_width.aspx?width=260&file=/modules/DigitalSignage/data/ads/images/[item.file_name]" width="260" height="180" alt=""></li>*@
-                        @*<li  ng-repeat="x in viewDataPosition_2_imageList" >*@
-                        <img  ng-repeat="x in viewDataPosition_2_imageList"
-                              data-id="{{x.id}}" data-interval="{{x.interval}}" data-content_ad_id="{{x.content_ad_id}}" data-ad_title="{{x.title}}"
-                              src="{{imageSource}}{{x.file_name}}" width="260" height="180" alt="">
-                        @*</li>*@
-
-                        @*</ul>*@
-                    </div>
-                </section>
+<div class="hd" id="ShowContent" ng-controller="showContentCtrlr">
+   
+    @Html.Partial("~/Views/Show/ShowContent_Type1.cshtml");
 </div>
-        
 
-    </div>
+<script>
+   // $('#ShowContent').load("Show/ShowContent_Type1");
+</script>
 
 
-</div>
 

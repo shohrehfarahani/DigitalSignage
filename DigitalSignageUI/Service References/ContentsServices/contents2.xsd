@@ -88,7 +88,6 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="position" type="xs:int" />
         <xs:element minOccurs="0" name="content_id" type="xs:long" />
       </xs:sequence>
     </xs:complexType>
@@ -103,7 +102,6 @@
   <xs:element name="loadContentsWithAdsItemDetail">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="position" type="xs:int" />
         <xs:element minOccurs="0" name="content_id" type="xs:long" />
       </xs:sequence>
     </xs:complexType>
@@ -118,7 +116,6 @@
   <xs:element name="loadLiveContentsAds">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="position" type="xs:int" />
         <xs:element minOccurs="0" name="content_id" type="xs:long" />
       </xs:sequence>
     </xs:complexType>
