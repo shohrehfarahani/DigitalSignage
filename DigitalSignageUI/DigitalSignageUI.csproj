@@ -394,7 +394,6 @@
     </None>
     <Content Include="Skins\CSS_tvShow\css\app.css" />
     <Content Include="Skins\CSS_tvShow\css\coin-slider-styles.css" />
-    <Content Include="Skins\CSS_tvShow\css\index.html" />
     <Content Include="Skins\CSS_tvShow\css\uicon.css" />
     <Content Include="Skins\CSS_tvShow\css\wi.css" />
     <Content Include="Skins\CSS_tvShow\fonts\artill_clean_icons-webfont.svg" />
@@ -441,13 +440,14 @@
     <Content Include="Skins\CSS_tvShow\js\routes.js" />
     <Content Include="Skins\CSS_tvShow\js\templates.js" />
     <Content Include="Skins\CSS_tvShow\script\coin-slider.js" />
-    <Content Include="Skins\CSS_tvShow\script\index.html" />
+    <Content Include="Skins\CSS_tvShow\script\datePersian.js" />
     <Content Include="Skins\CSS_tvShow\script\jquery.js" />
     <Content Include="Skins\CSS_tvShow\script\jquery.min.js" />
     <Content Include="Skins\CSS_tvShow\script\jquery.simpleWeather.js" />
     <Content Include="Skins\CSS_tvShow\script\jquery.simpleWeather.min.js" />
     <Content Include="Skins\CSS_tvShow\script\jquery.transit.min.js" />
     <Content Include="Skins\CSS_tvShow\script\modernizr.js" />
+    <Content Include="Skins\CSS_tvShow\script\pdate.min.js" />
     <Content Include="Skins\CSS_tvShow\slide\food01.jpg" />
     <Content Include="Skins\CSS_tvShow\slide\food02.jpg" />
     <Content Include="Skins\CSS_tvShow\slide\food03.jpg" />

@@ -6852,9 +6852,26 @@ p {
       min-width: 280px;
       height: 188px;
       min-height: 188px;
-      line-height: 188px;
+      color: #FFFFFF;
+      font: 100% "BRoya", "Arial", Tahoma, Gadget, sans-serif, "uicon";
       vertical-align: middle;
-      text-align: center; }
+      text-align: center;
+      padding-top: 0px; }
+    .hd .colAArowA .txtTime {
+      height: 120px;
+      min-height: 120px;
+      color: #FFFFFF;
+      font: 580% "BRoya", "Arial", Tahoma, Gadget, sans-serif, "uicon";
+      font-weight: 600;
+      margin: 0px;
+      padding: 0px; }
+    .hd .colAArowA .txtDate {
+      color: #FFFFFF;
+      font: 180% "BRoya", "Arial", Tahoma, Gadget, sans-serif, "uicon";
+      font-weight: 600;
+      margin: 0px;
+      margin-top: -8px;
+      padding: 0px; }
   .hd .colAArowB {
     display: table-row;
     position: relative;
@@ -6924,7 +6941,7 @@ i {
 
 #weather .cw {
   color: #FFFFFF;
-  font: 680% "BRoya", "Arial", Tahoma, Gadget, sans-serif, "uicon";
+  font: 580% "BRoya", "Arial", Tahoma, Gadget, sans-serif, "uicon";
   font-weight: 600;
   text-align: center;
   text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.45);
@@ -6932,11 +6949,11 @@ i {
   padding: 0px; }
 
 #weather .cc {
-  font: 125%;
+  font: 140%;
   color: rgba(255, 255, 255, 0.55);
   text-align: center;
   text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.15);
-  margin: 0 0 0 -6px;
+  margin: 0px;
   padding: 0px; }
 
 #weather ul {

@@ -8,11 +8,12 @@
         padding: 0px;
     }
 </style>
-<div class="rowA" >
+<div class="rowA">
     <div class="colAA">
         <div class="colAArowA">
             <div class="txt">
-                تاریخ و ساعت
+                <div id="show_time_1" class="txtTime"></div>
+                <div id="date" class="txtDate"></div>
             </div>
         </div>
         <div id="weather" class="colAArowB">
@@ -21,7 +22,7 @@
             <div id="coin-slider">
                 <img ng-repeat="x in viewDataPosition_2_imageList"
                      data-id="{{x.id}}" data-interval="{{x.interval}}" data-content_ad_id="{{x.content_ad_id}}" data-ad_title="{{x.title}}"
-                     src="{{imageSource}}{{x.file_name}}" width="280px" height="187px">
+                     src="{{imageSource}}{{x.file_name}}" >
             </div>
         </div>
     </div>
@@ -33,8 +34,8 @@
 <div class="rowB">
 
     <div class="marquee up">
-        <p  ng-repeat="x in viewDataPosition_45_TextList" data-id="{{x.id}}" data-interval="{{x.interval}}" data-content_ad_id="{{x.content_ad_id}}" data-ad_title="{{x.title}}" >{{x.description}}</p>
-       
+        <p ng-repeat="x in viewDataPosition_45_TextList" data-id="{{x.id}}" data-interval="{{x.interval}}" data-content_ad_id="{{x.content_ad_id}}" data-ad_title="{{x.title}}">{{x.description}}</p>
+
     </div>
 
 </div>
