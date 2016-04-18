@@ -54,6 +54,7 @@
       <xs:element minOccurs="0" name="itemList" nillable="true" type="tns:ArrayOfAdsIemInfoWTO" />
       <xs:element minOccurs="0" name="max_minutes" type="xs:int" />
       <xs:element minOccurs="0" name="passed_minutes" type="xs:int" />
+      <xs:element minOccurs="0" name="position" type="xs:int" />
       <xs:element minOccurs="0" name="shuffle" type="xs:int" />
       <xs:element minOccurs="0" name="status" type="xs:int" />
       <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />

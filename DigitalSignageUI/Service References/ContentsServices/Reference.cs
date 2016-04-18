@@ -501,6 +501,9 @@ namespace DigitalSignageUI.ContentsServices {
         private int passed_minutesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int positionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int shuffleField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -674,6 +677,19 @@ namespace DigitalSignageUI.ContentsServices {
                 if ((this.passed_minutesField.Equals(value) != true)) {
                     this.passed_minutesField = value;
                     this.RaisePropertyChanged("passed_minutes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int position {
+            get {
+                return this.positionField;
+            }
+            set {
+                if ((this.positionField.Equals(value) != true)) {
+                    this.positionField = value;
+                    this.RaisePropertyChanged("position");
                 }
             }
         }

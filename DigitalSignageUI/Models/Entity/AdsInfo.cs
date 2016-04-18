@@ -41,5 +41,6 @@ namespace DigitalSignageUI.Models.Entity
         public int interval { get; set; }
 
         public long content_ad_id { get; set; }
+        public int position { get; set; }
     }
 }

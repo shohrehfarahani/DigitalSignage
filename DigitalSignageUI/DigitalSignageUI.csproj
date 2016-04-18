@@ -236,10 +236,11 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\slider\flux.min.js" />
     <Content Include="Scripts\util\uiUtil\util.js.svntmp" />
     <Content Include="Scripts\util\factories.js" />
     <Content Include="Scripts\util\forms.js" />
-    <Content Include="Scripts\util\serviceNames.js" />
+    <Content Include="Scripts\util\sourceNames.js" />
     <Content Include="Scripts\util\sourceFactories.js" />
     <Content Include="Scripts\util\uiUtil\gridSetting.js" />
     <Content Include="Scripts\util\uiUtil\gridTemplate.js" />

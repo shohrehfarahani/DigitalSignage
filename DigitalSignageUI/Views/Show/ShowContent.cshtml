@@ -1,11 +1,18 @@
 ﻿<link href="~/Skins/Style/Content/block06.css" rel="stylesheet" />
 <script src="~/Scripts/FrontEndController/showContentCtrlr.js"></script>
 <script src="~/Scripts/flowPlayer/flowplayer-3.2.13.min.js"></script>
-
+<script src="~/Scripts/slider/flux.min.js"></script>
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-  
+ <style>
+    .flowplayerVideo {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+ 
 <div class="wrapper" ng-controller="showContentCtrlr">
     <div class="blockRight">
         <div class="blockRightTxtPlace">
@@ -33,16 +40,11 @@
             </ul>
         </div>
     </div>
-    <style>
-        .flowplayerVideo {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+  
     <div class="blockVideoPlace">
         <div class="blockVideo">
             <div class="blockVideoPlayback">
-                <div id="player" class="flowplayerVideo"  data-content_ad_id="{{scopeContent_ad_id}}" data-ad_title="{{scopeTitle}}"></div>
+                <div id="player" class="flowplayerVideo"  data-ad_title="{{viewDataPosition_6.title}}"></div>
             </div>
 
 
@@ -62,36 +64,24 @@
 
         </div>
 
-        <div class="blockFooter01 emphasize-dark">
-            <div class="edit-button" data-size="180" data-type="1" data-position="1"><img src="/data/images/edit-icon.png"></div>
-            <ul class="slider-animation" id="slideshow01">
-                @*[VIEW table="DS_ContentAds,DS_Ads(DS_Ads.id=DS_ContentAds.ad_id)" select_fields="DS_Ads.*,DS_ContentAds.interval,DS_ContentAds.id content_ad_id" id="ad" where="DS_Ads.passed_minutes < DS_Ads.max_minutes  AND  DS_ContentAds.position=1  AND  DS_ContentAds.content_id=[@NURL.content_id]"]
-                [VIEW table="DS_AdItems" id="item" where="ad_id=[ad.id]"]*@
-                <li data-id="[ad.id]" data-interval="[ad.interval]" data-content_ad_id="[ad.content_ad_id]" data-ad_title="[ad.title]"><img src="/modules/general/thumbnail_width.aspx?width=260&file=/modules/DigitalSignage/data/ads/images/[item.file_name]" width="260" height="180" alt=""></li>
-                @*[/VIEW]
-                [/VIEW]*@
-            </ul>
-        </div>
+        
         <div class="blockFooter02 emphasize-dark">
-            <div class="edit-button" data-size="180" data-type="1" data-position="2"><img src="/data/images/edit-icon.png"></div>
-            <ul class="slider-animation" id="slideshow02">
-                @*[VIEW table="DS_ContentAds,DS_Ads(DS_Ads.id=DS_ContentAds.ad_id)" select_fields="DS_Ads.*,DS_ContentAds.interval,DS_ContentAds.id content_ad_id" id="ad" where="DS_Ads.passed_minutes < DS_Ads.max_minutes  AND  DS_ContentAds.position=2  AND  DS_ContentAds.content_id=[@NURL.content_id]"]
-                [VIEW table="DS_AdItems" id="item" where="ad_id=[ad.id]"]*@
-                <li data-id="[ad.id]" data-interval="[ad.interval]" data-content_ad_id="[ad.content_ad_id]" data-ad_title="[ad.title]"><img src="/modules/general/thumbnail_width.aspx?width=260&file=/modules/DigitalSignage/data/ads/images/[item.file_name]" width="260" height="180" alt=""></li>
-                @*[/VIEW]
-                [/VIEW]*@
-            </ul>
-        </div>
-        <div class="blockFooter03 emphasize-dark">
-            <div class="edit-button" data-size="180" data-type="1" data-position="3"><img src="/data/images/edit-icon.png"></div>
-            <ul class="slider-animation" id="slideshow03">
-                @*[VIEW table="DS_ContentAds,DS_Ads(DS_Ads.id=DS_ContentAds.ad_id)" select_fields="DS_Ads.*,DS_ContentAds.interval,DS_ContentAds.id content_ad_id" id="ad" where="DS_Ads.passed_minutes < DS_Ads.max_minutes  AND  DS_ContentAds.position=3  AND  DS_ContentAds.content_id=[@NURL.content_id]"]
-                [VIEW table="DS_AdItems" id="item" where="ad_id=[ad.id]"]*@
-                <li data-id="[ad.id]" data-interval="[ad.interval]" data-content_ad_id="[ad.content_ad_id]" data-ad_title="[ad.title]"><img src="/modules/general/thumbnail_width.aspx?width=260&file=/modules/DigitalSignage/data/ads/images/[item.file_name]" width="260" height="180" alt=""></li>
-                @*[/VIEW]
-                [/VIEW]*@
-            </ul>
-        </div>
+            <div class="edit-button" data-size="180" data-type="1" data-position="2">
+           @* <ul class="slider-animation" id="slider">*@
+                <section class="container">
+                    <div id="slider">
+                        @*<li data-id="[ad.id]" data-interval="[ad.interval]" data-content_ad_id="[ad.content_ad_id]" data-ad_title="[ad.title]"><img src="/modules/general/thumbnail_width.aspx?width=260&file=/modules/DigitalSignage/data/ads/images/[item.file_name]" width="260" height="180" alt=""></li>*@
+                        @*<li  ng-repeat="x in viewDataPosition_2_imageList" >*@
+                        <img  ng-repeat="x in viewDataPosition_2_imageList"
+                              data-id="{{x.id}}" data-interval="{{x.interval}}" data-content_ad_id="{{x.content_ad_id}}" data-ad_title="{{x.title}}"
+                              src="{{imageSource}}{{x.file_name}}" width="260" height="180" alt="">
+                        @*</li>*@
+
+                        @*</ul>*@
+                    </div>
+                </section>
+</div>
+        
 
     </div>
 
